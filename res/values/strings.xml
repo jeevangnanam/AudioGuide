@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AudioGuideActivity!</string>
+    <string name="app_name">AudioGuide</string>
+    <string name="connectivity_title_dialog">Attention :</string>
+    <string name="connectivity_message_dialog">An error Occurred. Would you like to retry?</string>
+    <string name="connectivity_retry_button">Retry</string>
+    <string name="connectivity_cancel_button">Cancel</string>
+    <string name="about_title">Audio Guide</string>
+    <string name="about_text">We are crazy about Sri Lanka, and we want to make sure you get the most of your experience in our lovely island.</string>
+    <string name="about_btn_feedback">Feedback/Report Bugs</string>
+    <string name="about_termsofservice">Terms of Service</string>
+    <string name="about_info_provided">Information Provided by</string>
+    
+    <string name="html_code">&lt;html>&lt;head>&lt;title>&lt;/title>&lt;/head>&lt;body>&lt;h3 align=\'center\'>
+    %1$s&lt;/h3>&lt;center> &lt;img src=\'%2$s\' align=\'center\' height=212 width=276> 
+    &lt;/center>%3$s&lt;/body>&lt;/html>
+    </string>
+
+</resources>
