@@ -3,23 +3,98 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-    
-    <Button android:id="@+id/btnStartGPStour"
-        android:layout_width="wrap_content"
+
+      <ImageView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Start GPS"
-        android:onClick="onGPSClicked"     
-         />
-    <Button android:id="@+id/btnAudioGuide"
-        android:layout_width="wrap_content"
+        android:background="@drawable/bg_title_repeat"
+        android:src="@drawable/title"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Audio Guide" 
-       	android:onClick="onAudioGuideClicked"   />
-    
-    <Button android:id="@+id/btnOptions"
-        android:layout_width="wrap_content"
+        android:background="@drawable/banner" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_title"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+   
+   
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg"     >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true" >
+
+            <Button
+                android:id="@+id/btnStartGPStour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/button"
+                android:onClick="onGPSClicked"
+                android:text="Start GPS tour"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnAudioGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/button"
+                android:onClick="onAudioGuideClicked"
+                android:text="Audio Guide"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/button"
+                android:onClick="onOptionsClicked"
+                android:text="Options"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/app_terms"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+        
+        <Button  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/help"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dip"
+            android:onClick="HelpViewClicked" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Options" 
-        android:onClick="onOptionsClicked" />
+        android:src="@drawable/footer" 
+        android:scaleType="fitXY" />
 
 </LinearLayout>

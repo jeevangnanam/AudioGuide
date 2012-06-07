@@ -2,14 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical" >
 
-   <TextView android:text="TITLE"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_gravity="center"
-       android:textSize="22sp"
-       android:textColor="@android:color/white" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_repeat"
+        android:scaleType="fitXY"
+        android:src="@drawable/title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TITLE"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btnHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dip"
+            android:background="@android:color/transparent"
+            android:onClick="onFaqClick"
+            android:src="@drawable/help" />
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/lstView"
@@ -17,8 +42,15 @@
         android:layout_height="0dip"
         android:layout_margin="10dip"
         android:layout_weight="1"
+        android:background="@android:color/transparent"
         android:cacheColorHint="#00000000"
         android:scrollbars="none" >
     </ListView>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/footer" />
 
 </LinearLayout>

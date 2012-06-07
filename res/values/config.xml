@@ -3,6 +3,17 @@
 
     <string name="url_getlocations">http://audioguide.loooops.com/admin/locations.json</string>
     <string name="url_getlandmarks">http://audioguide.loooops.com/admin/locations/view/%1$s/view.json</string>
-   
-    
+    <!-- <string name="url_audio_guides">http://audioguide.loooops.com/admin/audioguides/index.json</string> -->
+    <string name="url_getlandmark">http://audioguide.loooops.com/admin/landmarks/view/%1$s/view.json</string>
+    <string name="base_url">http://audioguide.loooops.com</string>
+    <string name="url_about_author">http://audioguide.loooops.com/admin/contents/view/1/view.json</string>
+    <string name="url_about_loops">http://audioguide.loooops.com/admin/contents/view/2/view.json</string>
+    <string name="url_about_app">http://audioguide.loooops.com/admin/contents/view/3/view.json</string>
+    <string name="url_config_cat">http://audioguide.loooops.com/admin/configs/index.json</string>
+    <string name="url_faq_cat">http://audioguide.loooops.com/admin/faqs/index.json</string>
+    <string name="url_emergency_cat">http://audioguide.loooops.com/admin/emergencycontacts/index.json</string>
+    <string name="url_config_cat_details">http://audioguide.loooops.com/admin/faqcategories/view/1/index.json</string>
+    <string name="url_emergency_details">http://audioguide.loooops.com/admin/emergencycontactcategories/view/1/index.json</string>
+    <string name="url_store_push_details">http://audioguide.loooops.com/admin/pushnotifications/add?url=admin%2Fpushnotifications%2Fadd</string>
+
 </resources>

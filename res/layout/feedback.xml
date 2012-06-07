@@ -2,56 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical" >
 
-    <TextView
+     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
-        android:singleLine="true"
-        android:text=""
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:textStyle="bold" >
-    </TextView>
+        android:background="@drawable/bg_title_repeat"
+        android:src="@drawable/title"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Feedback"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <EditText
-        android:id="@+id/feedbackText"
+        android:id="@+id/txtName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
+        android:hint="Name (optional)"
         android:singleLine="true" >
     </EditText>
 
-    <TextView
+    <EditText
+        android:id="@+id/txtAddress"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
-        android:text=""
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:textStyle="bold" >
-    </TextView>
+        android:hint="Email Address"
+        android:singleLine="true" >
+    </EditText>
 
     <EditText
-        android:id="@+id/rptTxtBody"
+        android:id="@+id/txtBody"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_margin="5dip"
         android:layout_weight="1"
-        android:text="" >
+        android:hint="Inquiry"
+        >
     </EditText>
 
     <Button
-        android:id="@+id/rptTakePhoto"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnSubmit"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="3dip"
-        
         android:onClick="onSubmitReport"
-        android:text=""
-        android:textColor="@android:color/white"
+        android:text="Submit"
+        android:textColor="@android:color/black"
         android:textStyle="bold" >
     </Button>
 

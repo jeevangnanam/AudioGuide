@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- nav's key android:apiKey="0G0LHKCCJvhm9jjp3y-LvXUVfuDredYnutAZh3g" -->
+    <!-- work 0G0LHKCCJvhkEUaJKSy9kObp4Eij-R2JuJ9LGXg -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_repeat"
+        android:scaleType="fitXY"
+        android:src="@drawable/title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Map"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <com.google.android.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="0G0LHKCCJvhm9jjp3y-LvXUVfuDredYnutAZh3g"
+            android:clickable="true"
+            android:enabled="true" />
+
+        <Button
+            android:layout_width="75dip"
+            android:layout_height="25dip"
+            android:background="@drawable/button"
+            android:text="Locations"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/footer" />
+
+</LinearLayout>

@@ -37,7 +37,6 @@ public class WebService {
 	private static final int TIMEOUT = 5000;
 
 	private static InputStream makeHTTPRequest(final int type, final String url, List<NameValuePair> values) throws ServerErrorException, IOException {
-	
 		InputStream stream = null;
 		HttpParams params = new BasicHttpParams();
 		HttpConnectionParams.setSoTimeout(params, TIMEOUT);

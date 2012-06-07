@@ -11,7 +11,9 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Stack;
 
-import com.nz.audioguide.R;
+import com.loops.audioguide.R;
+
+
 
 import android.app.Activity;
 import android.content.Context;
@@ -26,7 +28,7 @@ public class ImageDownloader {
 
 	private static HashMap<String, SoftReference<Bitmap>> cache = new HashMap<String, SoftReference<Bitmap>>();
 
-	private static final String DIRECTORY_NAME = "lankadeepa";
+	private static final String DIRECTORY_NAME = "audioguide";
 
 	public final static String mode_profile = "profile";
 

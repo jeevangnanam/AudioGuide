@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dip"
+        android:text="@string/about_title"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"        
+        android:layout_margin="2dip"
+        android:padding="10dip"
+        android:text="@string/about_text" />
+
+    <Button
+        android:id="@+id/btnFeedback"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:text="@string/about_btn_feedback" />
+
+    <Button
+        android:id="@+id/btnTermsofService"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="2dip"
+        android:text="@string/about_termsofservice" />
+
+    <Button
+        android:id="@+id/btninfoprovided"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="2dip"
+        android:text="@string/about_info_provided" />
+
+</LinearLayout>

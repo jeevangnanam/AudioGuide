@@ -14,7 +14,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-import com.nz.audioguide.R;
+import com.loops.audioguide.R;
 
 import android.app.AlertDialog;
 import android.content.Context;

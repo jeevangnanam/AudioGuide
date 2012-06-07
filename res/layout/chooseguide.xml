@@ -2,28 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_repeat"
+        android:scaleType="fitXY"
+        android:src="@drawable/title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Choose Guide"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginRight="5dip"
         android:layout_marginTop="5dip" >
 
-        <TextView
-            android:id="@+id/txtToggleNearby"
+        <ImageButton
+            android:id="@+id/btnHelp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Places near by" />
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dip"
+            android:background="@android:color/transparent"
+            android:onClick="onFaqClick"
+            android:src="@drawable/help" />
 
-        <ToggleButton
-            android:id="@+id/txt"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Near by places" />
-    </LinearLayout>
+            android:layout_alignParentRight="true" >
+
+            <TextView
+                android:id="@+id/txtToggleNearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Places near by"
+                android:textColor="@android:color/black" />
+
+            <ToggleButton
+                android:id="@+id/btnToggleLocationNearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Near by places" />
+        </LinearLayout>
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/lstView"
@@ -31,8 +72,15 @@
         android:layout_height="0dip"
         android:layout_margin="10dip"
         android:layout_weight="1"
+        android:background="@android:color/transparent"
         android:cacheColorHint="#00000000"
         android:scrollbars="none" >
     </ListView>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/footer" />
 
 </LinearLayout>

@@ -2,20 +2,43 @@
 <resources>
 
     <string name="hello">Hello World, AudioGuideActivity!</string>
-    <string name="app_name">AudioGuide</string>
+    <string name="app_name">AudioTraveler</string>
     <string name="connectivity_title_dialog">Attention :</string>
     <string name="connectivity_message_dialog">An error Occurred. Would you like to retry?</string>
     <string name="connectivity_retry_button">Retry</string>
     <string name="connectivity_cancel_button">Cancel</string>
-    <string name="about_title">Audio Guide</string>
+    <string name="about_title">AudioTraveler</string>
     <string name="about_text">We are crazy about Sri Lanka, and we want to make sure you get the most of your experience in our lovely island.</string>
     <string name="about_btn_feedback">Feedback/Report Bugs</string>
     <string name="about_termsofservice">Terms of Service</string>
     <string name="about_info_provided">Information Provided by</string>
-    
-    <string name="html_code">&lt;html>&lt;head>&lt;title>&lt;/title>&lt;/head>&lt;body>&lt;h3 align=\'center\'>
-    %1$s&lt;/h3>&lt;center> &lt;img src=\'%2$s\' align=\'center\' height=212 width=276> 
-    &lt;/center>%3$s&lt;/body>&lt;/html>
-    </string>
+    <string name="html_code"><html>&lt;head>&lt;title>&lt;/title>&lt;/head>&lt;body>&lt;h3 align=\'center\'>
+    %1$s&lt;/h3>&lt;center> &lt;img src=\'%2$s\' align=\'center\' height=50 width=50> 
+    &lt;/center>&lt;/img>
+    &lt;/br>
+    %3$s&lt;/body>&lt;/html></html></string>
+    <string name="html_code_noimage">&lt;html>&lt;body>&lt;h3 align=\'center\'>
+    %1$s&lt;/h3>&lt;center> 
+    &lt;/center>
+    &lt;/br>
+    %2$s&lt;/body>&lt;/html></string>
+    <string  name="app_title">AudioTraveler</string>
+    <string name="app_terms">This service is brought to you by AudioTraveler</string>
+    <string name="aboutAuthor"><u>About this author</u></string>
+    <string name="share_button_text"><u>Share View</u></string>
+    <string name="author">Dr. Prashantha</string>
+    <string name="author_desc">About text About text About text About textAbout text About textAbout textAbout textAbout textAbout textAbout textAbout textAbout textAbout text</string>
+    <string name="how_to_user">How to use this AudioTraveler</string>
+    <string name="cannot_connect_title">Can\'t connect to Market</string>
+    <string name="cannot_connect_message">This app cannot connect to Market.
+     Your version of Market may be out of date.
+     You can continue to use this app but you
+     won\'t be able to make purchases.</string>
+    <string name="billing_not_supported_title">Can\'t make purchases</string>
+    <string name="billing_not_supported_message">The Market billing
+     service is not available at this time.  You can continue to use this app but you
+     won\'t be able to make purchases.</string>
+    <string formatted="false" name="help_url">http://market.android.com/support/bin/answer.py?answer=1050566&amp;hl=%lang%&amp;dl=%region%</string>
+    <string name="learn_more">Learn more</string>
 
 </resources>

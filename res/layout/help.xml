@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_title_repeat"
+            android:scaleType="fitXY"
+            android:src="@drawable/title" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/banner" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="15dip"
+                android:text="Audio Guide"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="15dip"
+            android:layout_weight="1"
+            android:background="@android:color/white" >
+
+            <TextView
+                android:id="@+id/rptTxtBody"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/author_desc"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:padding="10dip" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/rptfeedback"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dip"
+            android:background="@drawable/button"
+            android:onClick="onFeedbackClick"
+            android:text="Feedback/Report Bugs"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" >
+        </Button>
+
+        <Button
+            android:id="@+id/rpttermsofservice"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dip"
+            android:background="@drawable/button"
+            android:onClick="onTermsOfService"
+            android:text="Terms of Service"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" >
+        </Button>
+
+        <Button
+            android:id="@+id/rptinformationprovidedby"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dip"
+            android:background="@drawable/button"
+            android:onClick="onInformationProvidedby"
+            android:text="Information Provided by"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" >
+        </Button>
+
+        <Button
+            android:id="@+id/rptemergency"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dip"
+            android:background="@drawable/button"
+            android:onClick="onEmergencyClicked"
+            android:text="Emergency Numbers"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" >
+        </Button>
+    </LinearLayout>
+
+</ScrollView>

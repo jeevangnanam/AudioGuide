@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nz.audioguide"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.loops.audioguide"
+    android:versionCode="2"
+    android:versionName="1.1" >
 
-    <uses-sdk android:minSdkVersion="4" />
+    <uses-sdk android:minSdkVersion="7" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <permission
+        android:name="com.loops.audioguide.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.loops.audioguide.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <uses-library android:name="com.google.android.maps" />
+
         <activity
             android:label="@string/app_name"
-            android:name=".ui.AudioGuideActivity" >
+            android:name="com.loops.audioguide.ui.Splashscreen"
+            android:screenOrientation="portrait" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name=".ui.ListLocations" >
+            android:name="com.loops.audioguide.ui.AudioGuideActivity"
+            android:screenOrientation="portrait" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,33 +46,179 @@
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name=".ui.ListLandmarks" >
+            android:name="com.loops.audioguide.ui.ListLocations"
+            android:screenOrientation="portrait" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-         <activity
-            android:label="@string/app_name"
-            android:name=".ui.LandmarkDesc" >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-            
-            
         <activity
             android:label="@string/app_name"
-            android:name=".ui.ListLocations" >
+            android:name="com.loops.audioguide.ui.ListLandmarks"
+            android:screenOrientation="portrait" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.LandmarkDesc"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="com.loops.audioguide.stop" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.TermsofService"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.AboutAuthor"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.Help"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.ListLocations"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.MapGuide"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.Feedback"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.EmergencyContact"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.Faq"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.UpdateGuides"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.loops.audioguide.ui.SpecialOffer"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:exported="false"
+            android:name="com.loops.audioguide.player.MusicService" >
+            <intent-filter >
+                <action android:name="com.loops.audioguide.player.action.TOGGLE_PLAYBACK" />
+                <action android:name="com.loops.audioguide.player.action.PLAY" />
+                <action android:name="com.loops.audioguide.player.action.PAUSE" />
+                <action android:name="com.loops.audioguide.player.action.SKIP" />
+                <action android:name="com.loops.audioguide.player.action.REWIND" />
+                <action android:name="com.loops.audioguide.player.action.STOP" />
+                <action android:name="com.loops.audioguide.player.action.URL" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.loops.audioguide.player.MusicIntentReceiver" >
+            <intent-filter >
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.loops.audioguide.services.C2DMRegistrationService" />
+        <service android:name="com.loops.audioguide.ui.C2DMReceiver" />
+
+        <receiver
+            android:name="com.google.android.c2dm.C2DMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter >
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.loops.audioguide" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+r >
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.loops.audioguide" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
